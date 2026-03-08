@@ -7,6 +7,10 @@ declare namespace Cloudflare {
 	}
 	interface Env {
 	}
+    declare module "*.wasm?module" {
+    const value: ArrayBuffer;
+    export default value;
+    }
 }
 interface Env extends Cloudflare.Env {}
 
